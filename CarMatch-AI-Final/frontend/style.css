@@ -1,0 +1,463 @@
+/* ==================== RESET & VARIABLES ==================== */
+:root {
+    --primary: #f95c5c;
+    --primary-dark: #c13838;
+    --primary-light: #E69461;
+    --secondary: #ec4899;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    
+    --text-primary: #595a5b;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+    
+    --bg-primary: #f9fafb;
+    --bg-secondary: #ffffff;
+    --bg-glass: rgba(255, 255, 255, 0.7);
+    
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(150deg, #c13838 0%, #f95c5c 50%, #E69461 100%);
+    min-height: 100vh; 
+    color: var(--text-primary);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ==================== ANIMATED BACKGROUND ==================== */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: float 20s ease-in-out infinite;
+}
+
+.orb-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #dc4242 0%, transparent 70%);
+    top: -10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.orb-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #c13838 0%, transparent 70%);
+    bottom: -10%;
+    right: -10%;
+    animation-delay: 7s;
+}
+
+.orb-3 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, #c6694d 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    animation-delay: 14s;
+}
+
+/* ==================== CONTAINER ==================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ==================== GLASS CARD EFFECT ==================== */
+.glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    transition: var(--transition);
+}
+
+.glass-card:hover {
+    box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.2);
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInDown 0.8s ease;
+}
+
+.hero-title {
+    font-size: 3 rem;
+    font-weight: 800;
+    color: #f9fafb; 
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #f9fafb;    
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+/* ==================== SEARCH CARD ==================== */
+.search-card {
+    padding: 40px;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.card-header {
+    margin-bottom: 32px;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Input Group */
+.input-group {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: var(--text-light);
+    z-index: 1;
+}
+
+#userQuery {
+    width: 100%;
+    padding: 20px 20px 20px 56px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.5);
+    resize: vertical;
+    transition: var(--transition);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+#userQuery:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+/* Quick Filters */
+.quick-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.filter-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.filter-chip {
+    padding: 10px 18px;
+    border: 2px solid rgba(99, 102, 241, 0.2);
+    background: rgba(99, 102, 241, 0.05);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-chip:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Primary Button */
+.primary-btn {
+    width: 100%;
+    padding: 18px 32px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border: none;
+    border-radius: var(--radius-lg);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(99, 102, 241, 0.4);
+}
+
+.primary-btn:hover .btn-glow {
+    transform: translate(-50%, -50%) scale(2);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+/* ==================== LOADING STATE ==================== */
+
+.ai-thinking h3 {
+    font-size: 1.5rem;
+    margin: 24px 0 32px;
+    color: var(--text-primary);
+}
+
+.thinking-animation {
+    display: inline-flex;
+    gap: 4px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    animation: bounce 1.4s ease-in-out infinite;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* ==================== ERROR CARD ==================== */
+.error-card {
+    padding: 40px;
+    text-align: center;
+    animation: shake 0.5s ease;
+}
+
+.error-icon {
+    font-size: 4rem;
+    margin-bottom: 16px;
+}
+
+.error-card h3 {
+    font-size: 1.5rem;
+    color: var(--danger);
+    margin-bottom: 12px;
+}
+
+.error-card p {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.secondary-btn {
+    padding: 12px 32px;
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.secondary-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* ==================== RESULTS ==================== */
+.results-section {
+    animation: fadeInUp 0.6s ease;
+}
+
+/* Explanation Card */
+.explanation-card {
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.explanation-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.explanation-content p {
+    margin-bottom: 16px;
+}
+
+.results-count span {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.car-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.car-card:hover .car-image {
+    transform: scale(1.1);
+}
+
+
+/* Car Info */
+.car-info {
+    padding: 28px;
+}
+
+/* Car Details Grid */
+.car-details {
+    display: grid;
+    gap: 12px;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+.hidden {
+    display: none !important;
+}
+
+.sahibinden-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: transparent;
+    color: #000;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: none;
+    margin-top: 8px;
+    margin-left: -24px;
+}
+
+.sahibinden-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.8;
+}
+
+.sahibinden-logo {
+    width: 32px;
+    height: 32px;
+    background: #FFD600;
+    color: #000;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
