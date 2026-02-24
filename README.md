@@ -64,6 +64,20 @@ CarMatch-AI-Final/
 - Yeni özellikler eklemek isterseniz `agents` klasöründeki dosyalara bakabilirsiniz.
 - Ön yüzde değişiklik yapmak istediğinizde `frontend/index.html` ve `frontend/script.js` üzerinde çalışabilirsiniz.
 
+## 📷 Ekran Görüntüleri (Screenshots)
+
+Projeyi daha iyi anlamak için bazı örnek görseller ekledik. Depoda mevcut araç resimlerini kullanabilir veya kendi ekran görüntülerinizi aynı klasöre (`frontend/images`) ekleyip burada referanslayabilirsiniz.
+
+1. **Ana arayüz:** Uygulama açıldığında kullanıcıların gördüğü basit form.  
+   ![Arayüz](CarMatch-AI-Final/frontend/images/ford-fiesta.jpg)
+
+2. **Prompt girme anı:** Kullanıcının arama isteğini yazdığı kutu örneği.  
+   ![Prompt](CarMatch-AI-Final/frontend/images/kia-picanto.jpg)
+
+3. **Sonuç listesi:** Analiz edildikten sonra gelen sıralanmış araç çıktı.  
+   ![Sonuçlar](CarMatch-AI-Final/frontend/images/volkswagen-golf.jpg)
+
+> **Not:** Yukarıdaki resim bağlantıları proje içindeki `frontend/images` klasöründeki örnek araç görsellerine yönlendirir. GitHub üzerinde gerçek ekran görüntüleri kullanmak için kendi `.png` veya `.jpg` dosyalarınızı aynı klasöre ekleyip burada referans verin.
 
 ## 📄 Lisans
 
