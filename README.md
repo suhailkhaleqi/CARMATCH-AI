@@ -58,17 +58,6 @@ CarMatch-AI-Final/
 - Veri kümesi sabittir; yeni araç eklemek için CSV dosyasını elle düzenleyebilirsiniz.
 - Kodlar sade tutulmuş, anlaşılması kolay hedeflenmiştir.
 
-
-## 🔧 Geliştirme
-
-- Yeni özellikler eklemek isterseniz `agents` klasöründeki dosyalara bakabilirsiniz.
-- Ön yüzde değişiklik yapmak istediğinizde `frontend/index.html` ve `frontend/script.js` üzerinde çalışabilirsiniz.
-
-
-## 📄 Lisans
-
-Bu proje herhangi bir lisans dosyası içermiyor. Kullanım ve paylaşım serbesttir.
-
 ---
 
-Bu README, basit bir dille yazıldı; umarım kullanımı kolay bulursunuz. Başarılar! 😊
+Umarım kullanımı kolay bulursunuz. Başarılar! 😊
