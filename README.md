@@ -1,6 +1,6 @@
 # CarMatch-AI
 
-Bu proje, **Ben** adlı üniversite dersi kapsamında geliştirilen bir uygulamadır. Amaç, kullanıcının girdiği özelliklere göre otomobilleri filtreleyip sıralayabilen basit bir yapay zeka destekli sistem oluşturmaktır. Proje mümkün olduğunca sade bir dilde yazılmıştır; teknik ayrıntılar sizi yormadan hızlıca kullanılabilir.
+Bu proje, UREKTEN YAPAY ZEKA VE ETMEN ODAKLI YAPAY ZEKA adlı üniversite dersi kapsamında geliştirilen bir uygulamadır. Amaç, kullanıcının girdiği özelliklere göre otomobilleri filtreleyip sıralayabilen basit bir yapay zeka destekli sistem oluşturmaktır. Proje mümkün olduğunca sade bir dilde yazılmıştır; teknik ayrıntılar sizi yormadan hızlıca kullanılabilir.
 
 ## 🚗 Proje Hakkında
 
